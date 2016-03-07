@@ -1,0 +1,20 @@
+Below is a description of the variant data analyzed in Szpiech et al. (2013). Genomic coordinates are given with respect to human reference assembly hg18.
+
+Citations:
+(1) ZA Szpiech, J Xu, TJ Pemberton, W Peng, S Zöllner, NA Rosenberg, JZ Li (2013) Long runs of homozygosity are enriched for deleterious variation. American Journal of Human Genetics 10.1016/j.ajhg.2013.05.003 (in press)
+
+
+FILE: coding_variants_hgdp27.vcf
+      This file contains genotype information for all synonymous and missense variants in the following format:
+
+      <Header>
+      <chr>   <pos>	<reference allele>	<alternate allele>	<functional classification>	<genotype0>	... <genotype26>
+      ...
+
+FILE: coding_variants_nonsense_hgdp27.vcf
+      This file contains genotype information for all nonsense variants in the following format:
+
+      <Header>
+      <chr>   <pos>	<reference allele>	<alternate allele>	<functional classification>	<genotype0>	... <genotype26>
+      ...
+

@@ -1,0 +1,179 @@
+These files describe the exact data used for the paper "Population Structure in a
+Comprehensive Genomic Data Set on Human Microsatellite Variation" by TJ Pemberton,
+M DeGiorgio, NA Rosenberg (G3:Genes|Genomes|Genetics 3:903-919 [2013]).  These
+data are a combination of the data reported by the following studies:
+
+"Genetic structure of human populations" BY NA Rosenberg, JK Pritchard,
+JL Weber, HM Cann, KK Kidd, LA Zhivotovsky, MW Feldman (Science 298:2381
+-2385 [2002]).
+
+"Clines, clusters, and the effect of study design on the inference of human
+population structure" by NA Rosenberg, S Mahajan, S Ramachandran, C Zhao,
+JK Pritchard, MW Feldman (PLoS Genetics 1:660-671 [2005]).
+
+"Support from the relationship of genetic and geographic distance in human
+populations for a serial founder effect originating in Africa" by S
+Ramachandran, O Deshpande, CC Roseman, NA Rosenberg, MW Feldman, LL 
+Cavalli-Sforza (Proceedings of the National Academy of Sciences USA 102:
+15942-15947 [2005]).
+
+"Genetic variation and population structure in Native Americans" by S Wang*,
+CM Lewis Jr*, M Jakobsson*, S Ramachandran, N Ray, G Bedoya, W Rojas, MV Parra,
+JA Molina, C Gallo, G Mazzotti, G Poletti, K Hill, AM Hurtado, D Labuda, W
+Klitz, R Barrantes, MC Bortolini, FM Salzano, ML Petzl-Erler, LT Tsuneto, E
+Llop, F Rothhammer, L Excoffier, MW Feldman, NA Rosenberg, A Ruiz-Linares
+(PLoS Genetics 3:2049-2067 [2007]).
+
+"Geographic patterns of genome admixture in Latin American Mestizos" by S Wang,
+N Ray, W Rojas, MV Parra, G Bedoya, C Gallo, G Poletti, G Mazzotti, K Hill, AM
+Hurtado, B Camrena, H Nicolini, W Klitz, R Barrantes, JA Molina, NB Freimer11,
+M Cátira Bortolini, FM Salzano, ML Petzl-Erler, LT Tsuneto, JE Dipierri, EL
+Alfaro, G Bailliet, NO Bianchi, E Llop, F Rothhammer, L Excoffier, A 
+Ruiz-Linares (PLoS Genetics 4:e1000037 [2008]).
+
+"Genomic microsatellites identify shared Jewish ancestry intermediate between
+Middle Eastern and European populations" by NM Kopelman, L Stone, C Wang, D 
+Gefel, MW Feldman, J Hillel, NA Rosenberg (BMC Genetics 10:80 [2009]).
+
+"Low levels of genetic divergence across geographically and linguistically
+diverse populations from India" by NA Rosenberg, S Mahajan, C Gonzalez-Quevedo,
+MGB Blum, L Nino-Rosales, V Ninis, P Das, M Hegde, L Molinari, G Zapata, JL
+Weber, JW Belmont, PI Patel (PLoS Genetics 2:2052-2061 [2006]).
+
+"Impact of restrictied marital practices on genetic variation in an endogamous
+Gujarati Group" by TJ Pemberton, F-Y Li, Ek Hanson, NU Mehta, S Choi, J
+Ballantyne, JW Belmont, NA Rosenberg, C Tyler-Smith, PI Patel (American Journal
+of Physical Anthropology 149:92-103 [2012]).
+
+"The genetic structure of Pacific Islanders" by JS Friedlaender, FR
+Friedlaender, FA Reed, KK Kidd, JR Kidd, GK Chambers, RA Lea, JH Loo, G Koki,
+JA Hodgson, DA Merriwether, JL Weber (PLoS Genetics 4:e19 [2008]).
+
+"The genetic structure and history of Africans and African Americans" by SA
+Tishkoff, FA Reed, FR Friedlaender, C Ehret, A Ranciaro, A Froment, JB Hirbo,
+AA Awomoyi, JM Bodo, O Doumbo, M Ibrahim, AT Juma, MJ Kotze, G Lema, JH Moore,
+H Mortensen, TB Nyambo, SA Omar, K Powell, GS Pretorius, MW Smith, MA Thera,
+C Wambebe, JL Weber, SM Williams (Science 324:1035-1044 [2009]).
+
+"Genetic structure of chimpanzee populations" by S Becquet, N Patterson, AC
+Stone, M Przeworski, D Reich (PLoS Genetics 3:e66 [2007]).
+
+
+*Version 1.1 of the package of files - created by TJP, June 12, 2013
+
+--------------------------------------------------------------------------------
+
+1. pembertonEtAl2013.MS5795.stru
+
+This file includes the exact microsatellite data used by Pemberton et al.
+(2013) in their human-only analyses.  The format that is used by the STRUCTURE
+program.  The first line gives the list of loci. After the first line, each
+individual is listed on two consecutive lines.  The first five columns include
+the following information:
+
+(1) Individual code number assigned by the source publication (HGDP-CEPH,
+	Native American, Latino, Jewish, Asian Indian, and Chha Gaam Patel
+	individuals) or adjusted by a fixed amount from that of the source
+	publication; we added 2000 to all individual IDs from the Pacific
+	Islander data set, and we added 70000 to all individual IDs from the
+	African data set.
+(2) Population code number assigned by the source publication (HGDP-CEPH,
+	Native American, Latino, Jewish, Asian Indian, and Chha Gaam Patel 
+	populations) or adjusted by a fixed amount from that of the source
+	publication; we added 1000 to all population IDs from the Pacific
+	Islander data set, and we added 1100 to all population IDs from the
+	African data set.
+(3) Population name.
+(4) Location.
+(5) Pre-defined geographic region affiliation, as was used in the article.
+
+The next columns contain genotypes (measured in base pairs).  The left-to-right
+order of the genotypes corresponds to the left-to-right order of the locus names
+on the first line of the file.  The placement of genotypes on the first versus
+second line for an individual is arbitrary.  Missing data is denoted by "-9".
+
+--------------------------------------------------------------------------------
+
+2. pembertonEtAl2013.MS5795.loci
+
+This file contains information on the 645 microsatellite markers included in the
+combined human data set in file #1.
+
+The first five columns include the following information:
+
+(1) Chromosome
+(2) Marshfield screening set
+(3) Locus name (as given in row 1 of file #1)
+(4) Size of repeat unit.
+(5) Physical map position (bp; NCBI Build 36)
+(6) Genetic map position (cM; Rutgers Combined Physical-Linkage Map)
+
+Physical map positions were taken from "Sequence determinants of human
+microsatellite variability" by TJ Pemberton, CI Sandefur, M Jakobsson, NA
+Rosenberg (BMC Genomics 10:612 [2009]).  Genetic map positions were interpolated
+onto the Rutgers Combined Linkage-Physical Map from the physical map positions
+in column 5. For some loci, it was not possible to determine a physical map
+position or interpolate their genetic map position; these are denoted by "*".
+
+--------------------------------------------------------------------------------
+
+3. pembertonEtAl2013.M5879.stru
+
+This file includes the exact data used by Pemberton et al. (2013) in their
+combined human-chimpanzee analyses.  The format is that used by the structure
+program (see #1 above).
+
+--------------------------------------------------------------------------------
+
+4. pembertonEtAl2013.M5879.loci
+
+This file contains information on the 246 microsatellite markers included in the
+combined human-chimpanzee data set in file #3.  The format is the same as file #2
+above.
+
+--------------------------------------------------------------------------------
+
+5. pembertonEtAl2013.subsets.txt
+
+This file includes the source data set and subset membership information for
+the individuals included in files #1 and #3.  The first five columns are as
+described in #1 above.  In the next columns "1" indicates the inclusion of an
+individual in that set and "0" indicates exclusion, with the exception of the
+"fromChhaGaamPatel-dataSet[pembertonEtAl2012]?" column.  In this column, "0"
+indicates exclusion, and a letter representing the village of origin of the
+individual indicates inclusion: B, Bhadran; D, Dharmaj; K, Karamsad; N, Nadiad;
+S, Sojitra; V, Vaso; O, non-Chha Gaam Patel village.
+
+--------------------------------------------------------------------------------
+
+6. pembertonEtAl2013.codes.txt
+
+This file contains code numbers that have been assigned to the populations in
+files associated with the Pemberton et al. (2013) paper.  The columns include
+the following information:
+
+(1) Population code number assigned by the source publication (HGDP-CEPH,
+	Native American, Latino, Jewish, Asian Indian, and Chha Gaam Patel 
+	populations) or adjusted by a fixed amount from that of the source
+	publication (Pacific Islander and African data set populations).
+(2) Population name.
+(3) Location.
+(4) Pre-defined geographic region affiliation, as was used in the article.
+(5) Data set of origin
+
+--------------------------------------------------------------------------------
+
+7. pembertonEtAl2013.coordinates.txt
+
+This file contains the exact geographic coordinates for populations provided
+in Table S20 of the Pemberton et al. (2013) paper.  The first five columns are
+as described for file #6 above; columns 6 and 7 include the following
+information:
+
+(6) Latitude [degrees north]
+(7) Longitude [degrees east]
+
+For some populations, geographic coordinates were not available; these are
+denoted by "NA".
+
+--------------------------------------------------------------------------------

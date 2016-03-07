@@ -1,0 +1,18 @@
+These files are a subset of ROH data from Pemberton et al. (2012) used in Szpiech et al. (2013).  Genomic coordinates are given with respect to human reference assembly hg18.
+
+Citations:
+(1) TJ Pemberton, D Absher, MW Feldman, RM Myers, NA Rosenberg, JZ Li (2012) Genomic patterns of homozygosity in worldwide human populations. American Journal of Human Genetics 91: 275-292.
+(2) ZA Szpiech, J Xu, TJ Pemberton, W Peng, S Zöllner, NA Rosenberg, JZ Li (2013) Long runs of homozygosity are enriched for deleterious variation. American Journal of Human Genetics 10.1016/j.ajhg.2013.05.003 (in press)
+
+FILE: *.roh
+      These files are named by the population and HGDP individual ID (i.e. Biaka454.roh).  They contain ROH tract information in the following format:
+
+      <Header>
+      <chr>	<ROH start position>	<ROH end position>	<ROH length>
+      ...
+
+FILE: roh_boundaries_by_pop.txt
+      This file contains ROH boundary information for partitioning ROH into A/B/C classes from Pemberton et al. (2012) in the following format:
+      <Header>
+      <population>	<region>	<A/B boundary>	<B/C boundary>
+      ...

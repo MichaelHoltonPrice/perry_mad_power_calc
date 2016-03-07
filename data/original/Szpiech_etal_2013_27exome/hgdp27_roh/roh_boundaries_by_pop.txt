@@ -1,0 +1,7 @@
+Population	Geographic region	Boundary Class A & B (bp)	Boundary Class B & C (bp)
+Biaka		Africa	   676619		2149528
+Karitiana	America	   615621.5	2191780.5
+Maya		America	   562835.5	1799162.5
+San		Africa	   526971.5	1624711.5
+Surui		America	   586472.5	2115337
+Mozabite	Middle_East		528280	1547785.5
