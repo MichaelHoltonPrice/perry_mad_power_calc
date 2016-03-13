@@ -5,9 +5,10 @@ gitDir = os.path.join('C:'+os.sep,'Users','mhp12','git')
 projDir = os.path.join(gitDir,'perry_mad_power_calc')
 
 inputFile = os.path.join(projDir,'data','original','PembertonEtAl2013data-G3','pembertonEtAl2013.MS5795.stru')
+outputFile = os.path.join(projDir,'data','original','abc_toolbox','pembertonEtAl2013.MS5795.arp')
 
 
-data = stru_to_arp.stru_to_arp(inputFile,inputFile)
+data = stru_to_arp.stru_to_arp(inputFile,outputFile,title="PembertonEtAl2013data-G3 for Perry Lab simulation")
 
 
 #print(data[len(data)-1])

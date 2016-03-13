@@ -1,0 +1,18 @@
+[Profile]
+	Title="PembertonEtAl2013data-G3 for Perry Lab simulation"
+	NbSamples=1
+
+	GenotypicData=1
+	GameticPhase=0
+	RecessiveData=0
+	DataType=MICROSAT
+	LocusSeparator=WHITESPACE
+	MissingData='?'
+
+[Data]
+	[[Samples]]
+
+
+		SampleName="Sample 1"
+		SampleSize=25
+		SampleData= {
