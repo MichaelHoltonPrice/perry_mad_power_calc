@@ -1,8 +1,8 @@
 import stru_to_arp
 import os
 
-#gitDir = os.path.join('C:'+os.sep,'Users','mhp12','git')
-gitDir = os.path.join('C:'+os.sep,'Users','Michael','git')
+gitDir = os.path.join('C:'+os.sep,'Users','mhp12','git')
+#gitDir = os.path.join('C:'+os.sep,'Users','Michael','git')
 projDir = os.path.join(gitDir,'perry_mad_power_calc')
 
 inputFile = os.path.join(projDir,'data','original','PembertonEtAl2013data-G3','pembertonEtAl2013.MS5795.stru')

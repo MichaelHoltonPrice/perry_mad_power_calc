@@ -1,16 +1,28 @@
 import os
+import numpy as np
 
 class Stru:
     # A class to parse and store the data in a genetic Stru file. This will
     # likely not work for all types of Stru files, but it does work with the
     # Pemberton et al. 2013 Stru file.
     def __init__(self,filePath):
-        self.sampleDict = dict()
+        self.sampleInfoDict = dict() # A dictionary to store each sample's
+	                             # Population name, location and
+	                             # geographic affiliation
+
+        numLines = sum(1 for line in open(filePath)) # Num lines in file
+        self.numSamples = int((numLines-1)/2)
+        self.sampleIds = list()
+        #self.locusIds = list()
+
         fin = open(filePath, 'r')
+        sampleNum = -1
         for n,line in enumerate(fin):
-            #print(n)
-            if(n==1):
-                self.header = line.split(" ")
+            if(n==0):
+                self.locusIds = line.split(" ")
+                self.locusIds = [x.strip() for x in self.locusIds]
+                self.numLoci = len(self.locusIds)
+                self.repeats = np.empty([self.numSamples,self.numLoci,2], dtype=int)
             else:
                 tokens = line.split(" ")
 		# Descriptors consists of (from readme file):
@@ -22,9 +34,16 @@ class Stru:
                 # The individual and population code together comprise a unique
 		# key for the sample dictionary
                 sampleId = (tokens[0],tokens[1])
-                #print(sampleId)
-                loci = tokens[5:len(tokens)]
-                self.sampleDict[sampleId] = (tokens[2],tokens[3],tokens[4],loci)
+                repeatData = tokens[5:len(tokens)]
+                if sampleId in self.sampleInfoDict:
+                    chromosome = 1
+                else:
+                    chromosome = 0
+                    sampleNum = sampleNum + 1
+                    self.sampleIds.append(sampleId)
+                    self.sampleInfoDict[sampleId] = (tokens[2],tokens[3],tokens[4])
+                for locusNum,locus in enumerate(repeatData):
+                    self.repeats[sampleNum,locusNum,chromosome] = int(locus)
         fin.close()
         
 
