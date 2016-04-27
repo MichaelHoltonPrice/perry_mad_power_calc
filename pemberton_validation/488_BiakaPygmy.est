@@ -1,0 +1,18 @@
+// Priors and rules file
+// *********************
+
+[PARAMETERS]
+//#isInt? #name	#dist.#min	#max	
+//all N are in number of diploid individuals
+0	LOG_N_NOW	unif	2	4
+0	LOG_N_ANCESTRAL	unif	3	5
+1	T_SHRINK	unif	100	2000	
+0	STR_MUTATION	unif	0.00001	0.0001
+0	GAMMA	unif	8	15
+
+[RULES]
+LOG_N_ANCESTRAL > LOG_N_NOW
+
+[COMPLEX PARAMETERS]
+1	N_NOW = pow10( LOG_N_NOW )
+0	N_ANCESTRAL_REL = pow10( LOG_N_ANCESTRAL ) / N_NOW

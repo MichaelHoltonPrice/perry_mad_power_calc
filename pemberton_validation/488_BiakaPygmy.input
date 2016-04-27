@@ -1,0 +1,18 @@
+//Inputfile for the program ABCsampler
+//-----------------------------------------------------------------------
+samplerType standard 
+//-----------------------------------------------------------------------
+estName 488_BiakaPygmy.est
+obsName 488_BiakaPygmy.obs
+outName 488_BiakaPygmy_output
+separateOutputFiles 0
+simDataName 488_BiakaPygmy-temp_0.arp
+nbSims 10000
+writeHeader 1
+simulationProgram Simcoal2.exe
+simInputName 488_BiakaPygmy.par
+simParam SIMINPUTNAME#1#1#0
+sumStatProgram arlsumstat.exe
+sumStatParam SIMDATANAME#SSFILENAME#0#1
+
+ 
